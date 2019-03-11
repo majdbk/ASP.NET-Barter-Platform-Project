@@ -1,0 +1,93 @@
+﻿@model IEnumerable<tntroc.WebApplication.Models.GoodsModels>
+
+@{
+    ViewBag.Title = "IndexPersonnel";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+<h2>IndexPersonnel</h2>
+
+
+
+
+
+
+<div class="col-md-5">
+
+    <div class="product-holder">
+        @foreach (var item in Model)
+        {
+            <div class="product-item-2">
+
+                <div class="product-thumb">
+                    <img src="~/Content/myfronttemplate/img/@Html.DisplayFor(modelItem => item.image)" style="height:200px;width:200px;" />
+                </div>
+                <div class="product-content overlay">
+                    <h5>@Html.DisplayFor(modelItem => item.label)</h5>
+                    <span class="tagline">@Html.DisplayFor(modelItem => item.brand)</span>
+                    <span class="tagline">Sub-Category: @Html.DisplayFor(modelItem => item.subCategory.name)</span>
+                    <span class="tagline">Category: @Html.DisplayFor(modelItem => item.subCategory.category.name)</span>
+
+                    @{var ch = tntroc.Services.EchangeService.ConsultRequestCount(item.id_goods).ToString();}
+                    <span class="price">You Have : @ch  requests pending   @Html.ActionLink("View request", "RequestEchange", new { id = item.id_goods })</span>
+                    @{var ch2 = tntroc.Services.EchangeService.ConsultSentCount(item.id_goods).ToString();}
+                    <span class="price">you have  :@ch2  sents requests pending    @Html.ActionLink("View sent", "SentEchange", new { id = item.id_goods })</span>
+
+
+                </div> <!-- /.product-content -->
+            </div>
+                        }
+        
+    </div>
+    </div>
+<div class="col-md-4 col-sm-8">
+  
+    <h2>Hello @Html.DisplayFor(Model => Model.First().swapper.firstname)! here's Your Exchange Request statistics! </h2>
+    @{var ch3 = tntroc.Services.GoodsService.ConsultAllRequestUserCount(Model.First().id_goods).ToString();}
+    @{var ch4 = tntroc.Services.GoodsService.ConsultAllRequestUserCountAccepted(Model.First().id_goods).ToString();}
+    @{var ch5 = tntroc.Services.GoodsService.ConsultAllRequestUserCountCandeled(Model.First().id_goods).ToString();}
+    @{var ch6 = tntroc.Services.GoodsService.ConsultAllRequestUserCountPending(Model.First().id_goods).ToString();}
+    <span>So Far You Have  : </span>
+    
+
+    <span class="form-control"> All Request: @ch3 </span>
+    <br />
+    <br />
+    <span class="form-control"> All pending Requests: @ch6 </span>
+    <br />
+    <br />
+    <span class="form-control"> All Accepted Requests: @ch4</span>
+    <br />
+    <br />
+    <span class="form-control"> All Candeled Requests: @ch5 </span>
+    
+                       
+</div> <!-- /.col-md-4 -->
+
+
+<div class="col-md-4 col-sm-8">
+
+    <h2>Hello @Html.DisplayFor(Model => Model.First().swapper.firstname)! here's Your Exchange Request Sent statistics! </h2>
+    @{var ch7 = tntroc.Services.GoodsService.ConsultAllSenttUserCount(Model.First().id_goods).ToString();}
+    @{var ch8 = tntroc.Services.GoodsService.ConsultAllSenttUserCountAccepted(Model.First().id_goods).ToString();}
+    @{var ch9 = tntroc.Services.GoodsService.ConsultAllSenttUserCountCandeled(Model.First().id_goods).ToString();}
+    @{var ch10 = tntroc.Services.GoodsService.ConsultAllSenttUserCountPending(Model.First().id_goods).ToString();}
+    <span>So Far You Have  : </span>
+
+
+    <span class="form-control"> All Request  Sents: @ch7 </span>
+    <br />
+    <br />
+    <span class="form-control"> All pending Requests Sents: @ch10 </span>
+    <br />
+    <br />
+    <span class="form-control"> All Accepted Requests Sents: @ch8</span>
+    <br />
+    <br />
+    <span class="form-control"> All Candeled Requests Sents: @ch9 </span>
+
+
+</div> <!-- /.col-md-4 -->
+
+<span>  @Html.ActionLink("View stats", "chart", new { id = Model.First().swapperID })</span> 
+<span>  @Html.ActionLink("View stats", "chart2", new { id = Model.First().swapperID })</span> 

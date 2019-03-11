@@ -1,0 +1,320 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My profile</title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/customForm.css" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+    <script language="javaScript">
+
+        function selectImg() {
+
+            document.getElementById("fileUpload").click();
+        }
+
+        function openImgPopup() {
+            document.getElementById('imgPopup').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+
+        }
+
+        function closeImgPopup() {
+            document.getElementById('imgPopup').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+
+        }
+
+        function changeImg(event) {
+
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+
+            var imgtag = document.getElementById("tmpImg");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function (event) {
+                imgtag.src = event.target.result;
+            };
+
+            reader.readAsDataURL(selectedFile);
+
+        }
+
+        function saveImg() {
+            
+            document.getElementById("submitPhoto").click();
+        }
+
+        function openConfPopup() {
+            document.getElementById('confPopup').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+
+        }
+
+        function closeConfPopup() {
+            document.getElementById('confPopup').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+
+        }
+
+        function load() {
+
+            var date = new Date("@ViewBag.user.dateofbirth.ToString("yyyy-MM-dd")");
+
+            document.getElementById('datePicker1').valueAsDate = date;
+            document.getElementById('datePicker2').valueAsDate = date;
+
+            if ("@ViewBag.passError" != "") {
+
+                openConfPopup();
+                document.getElementById("error").innerHTML = "@ViewBag.passError";
+                document.getElementById("error").style.visibility = "visible";
+            }
+
+        }
+
+        function verif() {
+            var pass1 = document.getElementById("newPass").value;
+            var pass2 = document.getElementById("confirmPass").value;
+
+            if (pass1 != pass2) {
+                document.getElementById("error").style.visibility = "visible";
+            }
+            else
+                document.getElementById("submitPasses").click();
+
+        }
+
+
+
+
+    </script>
+
+
+</head>
+
+    <body onload="load()">
+
+        <style>
+            .cadre {
+                border-radius: 10px;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F5FBFF), color-stop(100%,#C6E6FF)) !important;
+            }
+
+            .profile-name {
+                padding: 0 !important;
+                border: 0 !important;
+                font-size: 1.5em !important;
+                font-weight: bold !important;
+                vertical-align: baseline !important;
+                margin-top: -5.5em !important;
+                margin-left: 11em !important;
+                color: #000 !important;
+            }
+
+
+            .black_overlay {
+                display: none;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index: 1001;
+                -moz-opacity: 0.8;
+                opacity: .80;
+                filter: alpha(opacity=80);
+            }
+
+            .white_content {
+                display: none;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+                width: 50%;
+                height: 50%;
+                padding: 16px;
+                border: 16px solid orange;
+                background-color: white;
+                z-index: 1002;
+                overflow: auto;
+            }
+
+            .myButton {
+                -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+                -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+                box-shadow: inset 0px 1px 0px 0px #dcecfb;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+                background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+                background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+                background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+                background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+                background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+                background-color: #bddbfa;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                border: 1px solid #84bbf3;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                font-family: Arial;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 6px 24px;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #528ecc;
+            }
+
+                .myButton:hover {
+                    cursor: grab;
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+                    background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                    background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                    background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                    background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                    background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+                    background-color: #80b5ea;
+                }
+
+                .myButton:active {
+                    position: relative;
+                    top: 1px;
+                }
+
+            .conf_content {
+                display: none;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+                height: 26em;
+                width:60em;
+                padding: 16px;
+                border: 16px solid #80b5ea;
+                background-color: white;
+                z-index: 1002;
+                overflow: auto;
+            }
+        </style>
+
+        <div class="cadre" style="color: green; height: 17em;">
+        </div>
+
+
+        @{
+            String src;
+
+            src = @Url.Content(ViewBag.imgPath);
+        }
+
+        <div class="ProfilePic">
+            <img style="margin-top:-17em; margin-left:2em;max-height:180px;" src="@src" />
+            <div class="profile-name">@ViewBag.user.firstname @ViewBag.user.lastname</div>
+            <img src="~/imgs/upload.png" id="upload" style="margin-top: 3em;margin-left: 1.5em;max-height: 4em;cursor: pointer;" onclick="openImgPopup()" />
+        </div>
+
+        <img src="~/imgs/configuration.png" style="margin-top:-8em;margin-left: 77em;cursor: pointer;" onclick="openConfPopup()" />
+
+
+
+            <form action="/swappers/updateSwapperPhoto?idSwapper=@ViewBag.user.id_swapper" method="post" enctype="multipart/form-data">
+                <input type="file" name="photo" id="fileUpload" style="display:none" onchange="changeImg(event)" />
+                <input id="submitPhoto" type="submit" value="Upload" style="display:none" />
+            </form>
+
+        
+
+
+        <div id="imgPopup" class="conf_content" style="width:40em; height:16em;">
+            <center><img id="tmpImg" width="180" height="180" src="@Url.Content(ViewBag.imgPath)" /></center>
+            
+            <div align="justify" style="margin-top: 2.4em;position: absolute;margin-left: 34.5em;">
+                <div class="myButton" onclick="saveImg()" >
+                    Save
+                </div>
+            </div>
+
+            <center><div align="center" style="margin-top:0.4em;" class="myButton" onclick="selectImg()">Change</div></center>
+            <div style="" align="right" class="myButton" onclick="closeImgPopup()">Close</div>
+        </div>               
+
+        
+            <div id="confPopup" class="conf_content" style="margin-top: -6em;margin-left:-11em;">
+
+
+                <div class="form-style-3">
+                    <form method="POST" action="/swappers/updateSwapper?idSwapper=@ViewBag.user.id_swapper">
+                        <fieldset>
+                            <legend>Personal</legend>
+                            <label for="field1"><span>First name</span><input type="text" class="input-field" name="fName" value="@ViewBag.user.firstname" /></label>
+                            <label for="field2"><span>Last name</span><input type="text" class="input-field" name="lName" value="@ViewBag.user.lastname" /></label>
+
+                            <label for="field3"><span>Email</span><input type="email" class="input-field" name="email" value="@ViewBag.user.email" /></label>
+                            <label for="field4"><span>Adress</span><input type="text" class="input-field" name="adress" value="@ViewBag.user.adress" /></label>
+                            <label for="field5"><span>State</span><input type="text" class="input-field" name="state" value="@ViewBag.user.state" /></label>
+                            <label for="field6"><span>Phone</span><input type="text" class="input-field" name="phone" value="@ViewBag.user.Phonenumber" /></label>
+                            <label for="field7"><span>Birthday</span><input id="datePicker2" type="date" class="input-field" name="birthday" value="@ViewBag.user.dateofbirth" /></label>
+                            <label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+                        </fieldset>
+                     </form>
+                  </div>
+
+                <div id="error" style="margin-top: -22em;margin-left: 38em;color:red;position: absolute;visibility:hidden;">
+                    Error! The passwords are not identical.
+                </div>
+
+                <div class="form-style-3" style="margin-top: -20em;margin-left: 32em;">
+                    <form method="POST" id="passForm" action="/swappers/changeSwapperPassword?idSwapper=@ViewBag.user.id_swapper">
+                        <fieldset>
+                            <legend>Change password</legend>
+                            <label for="field1"><span>Password</span><input type="password" class="input-field" name="currentPass" value="" required/></label>
+                            <label for="field2"><span>New Password</span><input type="password" class="input-field" id="newPass" name="newPass" value="" required/></label>
+                            <label for="field3"><span>Confirm Password</span><input type="password" class="input-field" id="confirmPass" name="confirmPass" value="" required/></label>                            
+
+                            <label><span>&nbsp;</span><input type="button" value="Submit" onclick="verif()"/></label>
+                            <input id="submitPasses" type="submit" value="Submit" style="visibility:hidden;"/>
+                        </fieldset>
+                    </form>
+                </div>
+
+
+                        
+                        <div style="margin-left: 58em;margin-top: 5em;" align="right" class="myButton" onclick="closeConfPopup()">Close</div>
+                </div>
+                <input id="submitUpdate" type="submit" style="display:none" />
+
+
+        <div id="fade" class="black_overlay"></div>
+
+
+        <div class="form-style-3">
+            <form>
+                <fieldset>
+                    <legend>Personal</legend>
+                    <label for="field2"><span>Email</span><input type="email" class="input-field" name="field2" value="@ViewBag.user.email" disabled/></label>
+                    <label for="field3"><span>Adress</span><input type="text" class="input-field" name="field2" value="@ViewBag.user.adress" disabled/></label>
+                    <label for="field4"><span>State</span><input type="text" class="input-field" name="field2" value="@ViewBag.user.state" disabled/></label>
+                    <label for="field5"><span>Phone</span><input type="text" class="input-field" name="field2" value="@ViewBag.user.Phonenumber" disabled/></label>
+                    <label for="field6"><span>Birthday</span><input id="datePicker1" type="date" class="input-field" name="field2" value="@ViewBag.user.dateofbirth" disabled/></label>
+                </fieldset>
+
+            </form>
+        </div>
+
+
+
+
+
+    </body>
+</html>

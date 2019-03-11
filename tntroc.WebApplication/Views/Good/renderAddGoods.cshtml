@@ -1,0 +1,175 @@
+﻿
+@using tntroc.Domain.Entities;
+
+@{
+    Layout = "~/Views/Shared/_layoutfront.cshtml";
+
+}
+<body >
+
+    <link rel="stylesheet" type="text/css" href="~/css/customForm.css" />
+    <script>
+
+       
+            function selectImg() {
+
+                document.getElementById("fileUpload").click();
+            }
+
+        function openImgPopup() {
+            document.getElementById('imgPopup').style.display = 'block';
+            document.getElementById('fade').style.display = 'block';
+
+        }
+
+        function closeImgPopup() {
+            document.getElementById('imgPopup').style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+
+        }
+
+        function changeImg(event) {
+
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+
+            var imgtag = document.getElementById("tmpImg");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function (event) {
+                imgtag.src = event.target.result;
+            };  
+            reader.readAsDataURL(selectedFile);
+
+        }
+
+
+        function getTheCategories() {
+
+            selectedCat = document.getElementById("catSelect").value;
+            // instanciation
+            xhr = new XMLHttpRequest;
+            var URL = "getTheSubCategories";
+            xhr.open("POST", URL, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("catSelect=" + selectedCat);
+            xhr.onreadystatechange = result;
+
+            function result() {
+                if ((xhr.readyState == 4) && (xhr.status == 200)) {
+                    document.getElementById("zone").innerHTML = xhr.responseText;
+                }
+
+            }
+        }
+
+    </script>
+    <style>
+        .myButton {
+            -moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            box-shadow: inset 0px 1px 0px 0px #dcecfb;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+            background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+            background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+            background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+            background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+            background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+            background-color: #bddbfa;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            border: 1px solid #84bbf3;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #528ecc;
+        }
+
+            .myButton:hover {
+                cursor: grab;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+                background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+                background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+                background-color: #80b5ea;
+            }
+
+            .myButton:active {
+                position: relative;
+                top: 1px;
+            }
+    </style>
+    <br /><br />
+    <center>
+        <div class="form-style-3">
+
+            <form method="POST" action="/Good/addGoods" enctype="multipart/form-data">
+                <fieldset style="width:600px">
+                    <table>
+                        <td>
+                            <div>
+                                <legend>Add a new product for exchange</legend>
+                                <label for="field1"><span>Label</span><input type="text" class="input-field" name="label" required /></label>
+                                <label for="field2"><span>Brand</span><input type="text" class="input-field" name="brand" required /></label>
+                                <label for="field3"><span>Quantity</span><input type="number" class="input-field" name="quantity" required/></label>
+                                <label for="field4">
+                                    <span>Category</span>
+                                    <select id="catSelect" name="cat" onchange="getTheCategories()">
+                                        @{
+                                            foreach (category c in ViewBag.categories)
+                                            {
+                                                <option value="@c.id_category">@c.name</option>
+                                            }
+                                        }
+                                    </select>
+                                </label>
+
+                                <label for="field5">
+                                    <span>Subcategory</span>
+                                    <select name="subCat" id="zone">
+                                        @{
+                                            foreach (subCategory sc in ViewBag.subCategories)
+                                            {
+                                                <option value="@sc.id_subCategory">@sc.name</option>
+                                            }
+                                        }
+                                    </select>
+                                </label>
+
+                                <label for="field6">
+                                    <span>Description</span>
+                                    <input type="text" class="input-field" name="desc" required/>
+                                </label>
+                                <input type="submit" value="Add" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ProfilePic">
+                                <img id="tmpImg" src="~/imgs/Product.png" width="200" height="200" />
+                                <div class="profile-name"></div>
+                                  </div>
+                            <center><div align="center" style="margin-top:0.4em;" class="myButton" onclick="selectImg()">Change</div></center>
+                        </td>
+                    </table>
+                </fieldset>
+                    <input type="file" name="photo" id="fileUpload" style="display:none" onchange="changeImg(event)" />
+            </form>
+
+
+           
+
+
+
+        </div>
+
+</body>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<tntroc.WebApplication.Models.GoodsModels>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+
+    
+    <H2>Index</H2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+   
+
+
+
+<div class="row">
+@foreach (var item in Model)
+{
+
+    <div class="col-md-3 col-sm-6">
+        <div class="product-item-vote">
+            <div class="product-thumb">
+                <img src="~/Content/myfronttemplate/img/@Html.DisplayFor(modelItem => item.image)" style="height:200px;width:200px;" alt="">
+            </div> <!-- /.product-thum -->
+            <div class="product-content">
+                <h5><a href="#">@Html.DisplayFor(modelItem => item.label)</a></h5>
+                <h5><a href="#">@Html.DisplayFor(modelItem => item.brand)</a></h5>
+                <span class="tagline">@Html.DisplayFor(modelItem => item.subCategory.name)</span>
+                <span class="tagline">@Html.DisplayFor(modelItem => item.subCategory.category.name)</span>
+                <span class="product-infos">@Html.DisplayFor(modelItem => item.date)</span>
+
+                @{var ch = tntroc.Services.EchangeService.ConsultRequestCount(item.id_goods).ToString();}
+                <span class="navbar-btn">This Item Have : @ch  requests pending  </span>
+
+               <span class="bg-info"> @Html.ActionLink("Details", "Details", new { id = item.id_goods })  </span>
+            </div> <!-- /.product-content -->
+        </div> <!-- /.product-item-vote -->
+    </div> <!-- /.col-md-3 -->
+
+}
+
+</div> <!-- /.row -->
+
+
+
+
+@*@{
+
+    var data = tntroc.Services.GoodsService.chart();
+    var myChart = new Chart(width: 600, height: 400)
+.AddTitle("Product Sales")
+.AddSeries(chartType: "Pie",
+    xValue: data, xField: "brand",
+    yValues: data, yFields: "date")
+.Write();
+}*@

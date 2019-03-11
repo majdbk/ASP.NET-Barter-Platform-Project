@@ -1,0 +1,68 @@
+﻿@model tntroc.WebApplication.Models.GoodsModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+
+   
+        <h2>Good Details</h2>
+       
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="product-image">
+            <img src="~/Content/myfronttemplate/img/@Html.DisplayFor(model => model.image)" style="height:200px;width:200px;" alt="">
+        </div> <!-- /.product-image -->
+        <div class="product-information">
+            <h2>@Html.DisplayFor(model => model.label)</h2>
+            <h3>@Html.DisplayFor(model => model.brand)</h3>
+           
+        
+            <p> @Html.DisplayFor(model => model.description)</p>
+            <p class="product-infos">
+               
+             
+                <span> Categorie:  @Html.DisplayFor(model => model.subCategory.category.name) </span>
+                <br />
+                <br />
+                <span>Sub-Categorie:  @Html.DisplayFor(model => model.subCategory.name) </span>
+                <br />
+                <br />
+                <span>Date: @Html.DisplayFor(model => model.date) </span>
+                <br />
+                <br />
+                <span>Quantity:@Html.DisplayFor(model => model.quantity) </span>
+               
+
+            </p>
+            <ul class="follow-us">
+                <li>
+                    @*<span class="button">  @Html.ActionLink("Request", "CreateRequest", new { id = Model.id_goods })</span>*@
+                </li>
+                <li>
+                    <span class="button">  @Html.ActionLink("Create echange", "Create", new { id = Model.id_goods })</span>
+                </li>
+                <li>
+                    <span class="button"> @Html.ActionLink("Back to List", "Index")</span>
+                </li>
+            </ul>
+        </div> <!-- /.product-information -->
+    </div> <!-- /.col-md-8 -->
+    <div class="col-md-4 col-sm-8">
+        <h2>Swaper Info</h2>
+      
+            <span> First Name: @Html.DisplayFor(model => model.swapper.firstname) </span>
+            <br />
+            <br />
+            <span> Last Name: @Html.DisplayFor(model => model.swapper.lastname) </span>
+            @*<ul class="follow-us">
+                <li>
+                    <span class="button">  @Html.ActionLink("Consult Swaper", "ConsultSwaper", new { id = Model.swapperID }) </span>
+                </li>
+
+            </ul>*@
+            
+</div> <!-- /.col-md-4 -->
+</div> <!-- /.row -->

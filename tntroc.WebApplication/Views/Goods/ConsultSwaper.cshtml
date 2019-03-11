@@ -1,0 +1,84 @@
+﻿@model tntroc.WebApplication.Models.SwaperModels
+
+@{
+    ViewBag.Title = "Swaper Info";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+
+    <div>
+        <h4>Swaper Info</h4>
+        <hr/>
+        <div class="product-content overlay">
+            <div class="product-infos">
+             
+                    
+                <span class="form-control">     First Name:   @Html.DisplayFor(model => model.firstname)</span>
+                    
+
+                 
+               
+
+
+                <span class="form-control">
+                   Last Name:   @Html.DisplayFor(model => model.lastname)
+                </span>
+
+
+               
+
+
+
+                <span class="form-control">
+                    Date Of Birth:   @Html.DisplayFor(model => model.dateofbirth)
+                </span>
+
+
+
+               
+
+
+
+                   <span class="form-control">
+                   Phone Number:     @Html.DisplayFor(model => model.Phonenumber)</span>
+
+
+              
+
+
+                            <span class="form-control">
+                        E-mail Adress:    @Html.DisplayFor(model => model.email)</span>
+
+               
+                <span class="form-control">
+                   Adress:    @Html.DisplayFor(model => model.adress)
+                </span>
+
+              
+               
+
+                <span class="form-control">
+                   State:   @Html.DisplayFor(model => model.state)
+                </span>
+
+                @{var ch2 = tntroc.Services.GoodsService.ConsultAllRequestUserCount(Model.id_swapper).ToString();}
+
+                    <span class="form-control"> Number of Requests Sent To @Html.DisplayFor(model => model.firstname): @ch2</span>
+
+
+
+
+
+
+</div>
+            </div>
+
+    <p class="form-control">
+        @Html.ActionLink("Consult All Goods Of This Swapper", "ConsultGoods", new { id = Model.id_swapper}) |
+        @Html.ActionLink("Back to List", "IndexPersonnel")
+    </p>
+
+
+        </div>
+
+

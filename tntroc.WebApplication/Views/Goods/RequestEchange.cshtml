@@ -1,0 +1,101 @@
+﻿@model IEnumerable<tntroc.WebApplication.Models.ExchangeModels>
+
+@{
+    ViewBag.Title = "RequestEchange";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+
+    
+    <h2>Requested Exchanges</h2>
+
+
+   
+    <table class="table">
+        <tr>
+            <th>
+                This swapper
+            </th>
+            <th>
+               offers
+            </th>
+            <th>
+               brand
+            </th>
+            <th>
+                type
+            </th>
+            <th>
+               Category
+            </th>
+            <th>
+                Date proposed
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Action
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.goodOffre.swapper.firstname)  @Html.DisplayFor(modelItem => item.goodOffre.swapper.lastname)
+            </td>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.goodOffre.label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goodOffre.brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goodOffre.subCategory.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goodOffre.subCategory.category.name)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.date_exchange)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+
+            <td>
+                @Html.ActionLink("view details", "DetailsPartner", new { id=item.idgoodOffre}) |
+                @if (item.status != tntroc.Domain.Entities.Statusexchange.accepted) {
+                @Html.ActionLink("Accept", "AcceptEchange", new { id = item.id_exchange }) 
+                }
+                else { <text>Accept is not available</text>}
+
+
+                 @if (item.status != tntroc.Domain.Entities.Statusexchange.canceled)
+                 {
+                @Html.ActionLink("Cancel", "CancelEchange", new { id = item.id_exchange })
+                 }
+                 else
+                 { <text>Cancel is not available</text>}
+
+
+                @if (item.status == tntroc.Domain.Entities.Statusexchange.accepted)
+                {
+                    @Html.ActionLink("Contact", "ConsultSwaper", new { id = item.goodOffre.swapperID })
+                }
+                else
+                { <text>Contact is not available</text>}
+
+
+            </td>
+        </tr>
+    }
+    
+    </table>
+

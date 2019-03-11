@@ -1,0 +1,85 @@
+﻿@model IEnumerable<tntroc.WebApplication.Models.ExchangeModels>
+
+@{
+    ViewBag.Title = "SentEchange";
+    Layout = "~/Views/Shared/_Layoutfront.cshtml";
+}
+
+<h2>Sent Exchanges</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+           product desired
+        </th>
+        <th>
+           brand
+        </th>
+        <th>
+           owner
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Date proposed
+        </th>
+        <th>
+            status
+        </th>
+        <th>
+           action
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.goodDemande.label)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodDemande.brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodDemande.swapper.firstname)  @Html.DisplayFor(modelItem => item.goodDemande.swapper.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodDemande.subCategory.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goodDemande.subCategory.category.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_exchange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.ActionLink("view details", "DetailsPartner", new { id = item.idgooddemande })
+           @if (item.status != tntroc.Domain.Entities.Statusexchange.canceled)
+           {
+            @Html.ActionLink("Cancel", "CancelEchange", new { id = item.id_exchange })
+
+           }
+           else
+           { <text>Cancel is not available</text>}
+
+            @if (item.status == tntroc.Domain.Entities.Statusexchange.accepted)
+            {
+                @Html.ActionLink("Contact", "ConsultSwaper", new { id = item.goodDemande.swapperID })
+            }
+            else
+            { <text>Contact is not available</text>}
+        </td>
+    </tr>
+}
+
+</table>

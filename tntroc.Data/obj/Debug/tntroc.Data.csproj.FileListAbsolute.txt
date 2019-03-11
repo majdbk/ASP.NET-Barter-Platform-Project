@@ -1,0 +1,111 @@
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.v1.resources
+c:\users\dell\documents\visual studio 2015\Projects\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csproj.GenerateResource.Cache
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.v.resources
+C:\Users\ASUS\Desktop\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csproj.GenerateResource.Cache
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.v.resources
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csproj.GenerateResource.Cache
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+D:\tn-troc\Nouveau dossier\projetlina\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\Lina&Sarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.mig1.resources
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csproj.GenerateResource.Cache
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.migimgGood.resources
+C:\Users\khaled\Documents\Visual Studio 2015\Projects\LinaSarra\tntroc\tntroc.Data\obj\Debug\tntroc.Data.Migrations.rating.resources
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll.config
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\tntroc.Data.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\tntroc.Data.pdb
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\EntityFramework.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\MySql.Data.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\tntroc.Domain.pdb
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\EntityFramework.xml
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\obj\Debug\tntroc.Data.csprojResolveAssemblyReference.cache
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\obj\Debug\tntroc.Data.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\obj\Debug\tntroc.Data.pdb
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\Google.Protobuf.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\Google.Protobuf.xml
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\MySql.Data.xml
+C:\Users\majd ben khalifa\Downloads\pidevfinal\tntroc\tntroc\tntroc.Data\bin\Debug\MySql.Data.Entity.EF6.xml

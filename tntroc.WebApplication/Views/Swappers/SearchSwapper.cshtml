@@ -1,0 +1,135 @@
+﻿@model tntroc.WebApplication.Models.SwapperSearch
+
+@{
+    Layout = null;
+}
+
+@section scripts {
+
+    <link rel="stylesheet" type="text/css" href="~/css/TextInputs.css" />
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search Swappers</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/SearchSuggest.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            font: 13px arial;
+        }
+
+        .suggest_link {
+            background-color: #FFFFFF;
+            padding: 2px 6px 2px 6px;
+            width:400px;
+    margin: auto;
+    
+        }
+
+        .suggest_link_over {
+            background-color: #3366CC;
+            padding: 2px 6px 2px 6px;
+            width:400px;
+    margin: auto;
+     
+        }
+
+        #search_suggest {
+            position: absolute;
+            background-color: #FFFFFF;
+            text-align: left;            
+            width:400px;
+            margin: auto;
+    
+        }
+
+        input[type=text] {
+    width: 30%;
+    box-sizing: border-box;
+    border:2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-48.png');
+    
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+        input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+       
+
+    </style>
+
+</head>
+<body>
+
+
+    <body>    
+        @using (Html.BeginForm("SearchSwapper", "Swappers", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.TextBoxFor(m => m.txt, new { @class = "form-control",@type="text", @id = "txtSearch", onkeyup = "searchSuggest(event)", autocomplete = "off" })
+            <div id="search_suggest"></div>
+            <input type="submit" value="Search" class="btn btn-default" />
+        }
+
+            <h2>List Swappers</h2>
+            <div style="margin-left: 5em;">
+                <table class="table">
+                    <tr>
+                        <th></th>
+                        <th>First Name</th>
+                        <th>Last name</th>
+                    </tr>
+
+                    @foreach (var item in Model.res)
+                    {
+
+                        String src = item.imgPath;
+                        if (src == null)
+                        { src = ""; }
+                            if (src.Equals(""))
+                            {
+                                if (item.sex == tntroc.Domain.Entities.Sex.F)
+                                {
+                                    src = "/imgs/female.png";
+                                }
+                                else
+                                {
+                                    src = "/imgs/man.gif";
+                                }
+                            }
+                            else
+                            {
+                                src = src.Substring(1, src.Length-1);
+                            }
+
+
+                        <tr>
+                            <td><a href="/swappers/toProfile?idSwapper=@item.id_swapper"><img src="@src" width="150" height="150" /></a></td>
+                            <td>@Html.DisplayFor(modelItem => item.firstname)</td>
+                            <td>@Html.DisplayFor(modelItem => item.lastname)</td>
+                            
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+
+       
+</body>
+</html>

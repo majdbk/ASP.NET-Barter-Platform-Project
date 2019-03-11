@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.Console", "tntroc.Console\tntroc.Console.csproj", "{53C9581A-68C8-477A-9176-4344693C7255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.Data", "tntroc.Data\tntroc.Data.csproj", "{0B029A3D-81B9-4E80-BE57-1D691FADD1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.Domain", "tntroc.Domain\tntroc.Domain.csproj", "{C092C4DA-5572-4F05-A07C-A0D67C91E400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.Services", "tntroc.Services\tntroc.Services.csproj", "{EC24FF42-FA3C-427F-A5C3-E533D95F9EE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.ServicesPattern", "tntroc.ServicesPattern\tntroc.ServicesPattern.csproj", "{74E08117-EEEF-4350-AFC0-F7B76D0A9B86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tntroc.WebApplication", "tntroc.WebApplication\tntroc.WebApplication.csproj", "{DD8D2E11-A9DB-4F0C-BABD-226264255849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53C9581A-68C8-477A-9176-4344693C7255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C9581A-68C8-477A-9176-4344693C7255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C9581A-68C8-477A-9176-4344693C7255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C9581A-68C8-477A-9176-4344693C7255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B029A3D-81B9-4E80-BE57-1D691FADD1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B029A3D-81B9-4E80-BE57-1D691FADD1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B029A3D-81B9-4E80-BE57-1D691FADD1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B029A3D-81B9-4E80-BE57-1D691FADD1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C092C4DA-5572-4F05-A07C-A0D67C91E400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C092C4DA-5572-4F05-A07C-A0D67C91E400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C092C4DA-5572-4F05-A07C-A0D67C91E400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C092C4DA-5572-4F05-A07C-A0D67C91E400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC24FF42-FA3C-427F-A5C3-E533D95F9EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC24FF42-FA3C-427F-A5C3-E533D95F9EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC24FF42-FA3C-427F-A5C3-E533D95F9EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC24FF42-FA3C-427F-A5C3-E533D95F9EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E08117-EEEF-4350-AFC0-F7B76D0A9B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E08117-EEEF-4350-AFC0-F7B76D0A9B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E08117-EEEF-4350-AFC0-F7B76D0A9B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E08117-EEEF-4350-AFC0-F7B76D0A9B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD8D2E11-A9DB-4F0C-BABD-226264255849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8D2E11-A9DB-4F0C-BABD-226264255849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8D2E11-A9DB-4F0C-BABD-226264255849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8D2E11-A9DB-4F0C-BABD-226264255849}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
